@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>御代家（みよけ）- 庚申塚の焼き鳥・居酒屋</title>
+    <title>庚申塚 御代家【公式HP】｜地元密着型居酒屋</title>
     <!-- Google Fonts for Modern Japanese Style -->
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
@@ -60,7 +60,7 @@
         nav ul {
             list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 25px;
         }
 
         nav a {
@@ -74,9 +74,9 @@
             color: var(--accent-gold);
         }
 
-        /* Hero Section */
+        /* Hero Section with Real Image */
         .hero {
-            height: 80vh;
+            height: 85vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -84,39 +84,48 @@
             text-align: center;
             padding: 0 20px;
             margin-top: 60px;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            position: relative;
+        }
+
+        /* Use actual yakitori image background or overlay if preferred, let's use a gorgeous local vibe background */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
         }
 
         .hero h1 {
             font-size: 2.8rem;
             color: #fff;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--accent-gold);
             margin-bottom: 30px;
+            font-weight: 500;
         }
 
         .btn-tel {
             display: inline-block;
             background-color: var(--accent-gold);
             color: #121212;
-            padding: 12px 35px;
+            padding: 14px 40px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 2px;
             transition: opacity 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .btn-tel:hover {
-            opacity: 0.8;
+            opacity: 0.85;
         }
 
         /* Sections */
         section {
-            padding: 80px 10%;
+            padding: 80px 8%;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -138,6 +147,14 @@
             margin: 15px auto 0;
         }
 
+        /* About & Features */
+        .about-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: var(--text-muted);
+        }
+
         /* Info Grid */
         .info-grid {
             display: grid;
@@ -148,14 +165,46 @@
         .info-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            padding: 30px;
+            padding: 35px 30px;
             border-radius: 4px;
         }
 
         .info-card h3 {
             font-size: 1.2rem;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             color: var(--accent-gold);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .info-card p {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        /* Menu Section */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .menu-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 4px;
+        }
+
+        .menu-item h3 {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .menu-item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
         }
 
         /* Instagram Section */
@@ -163,12 +212,29 @@
             text-align: center;
         }
 
-        .insta-placeholder {
+        .insta-box {
             background-color: var(--card-bg);
-            border: 1px dashed var(--border-color);
+            border: 1px solid var(--border-color);
             padding: 40px;
-            color: var(--text-muted);
             border-radius: 4px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .btn-insta {
+            display: inline-block;
+            margin-top: 20px;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: opacity 0.3s;
+        }
+
+        .btn-insta:hover {
+            opacity: 0.85;
         }
 
         /* Footer */
@@ -182,8 +248,9 @@
         }
 
         @media (max-width: 768px) {
-            nav { display: none; } /* Simplified for mobile test */
-            .hero h1 { font-size: 2rem; }
+            nav { display: none; }
+            .hero h1 { font-size: 2.1rem; }
+            section { padding: 50px 5%; }
         }
     </style>
 </head>
@@ -203,26 +270,42 @@
 
     <section class="hero">
         <h1>旨い酒と、一本の温もりを。</h1>
-        <p>都電荒川線 庚申塚駅 目の前</p>
-        <a href="tel:0339180084" class="btn-tel">お電話でのご予約・お問い合わせ</a>
+        <p>都電荒川線「庚申塚駅」目の前</p>
+        <a href="tel:0339180084" class="btn-tel">03-3918-0084 に電話する</a>
     </section>
 
     <section id="about">
         <h2>御代家について</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-muted);">
-            庚申塚のホームのすぐそば、ふらっと立ち寄れるアットホームな居酒屋です。<br>
-            一本一本丁寧に仕込む自慢の焼き鳥と、厳選された焼酎・日本酒、そして新鮮な刺身をご用意して、今日も皆様のお越しをお待ちしております。
+        <p class="about-text">
+            都電荒川線「庚申塚」駅のホームのすぐそば。ふらっと気軽に立ち寄れる、地元密着型のアットホームな居酒屋です。<br>
+            一本ずつ丁寧に仕込む自慢の焼き鳥や新鮮なお刺身、豊富な焼酎・日本酒を取り揃えて、今日も温かく皆様をお迎えいたします。お一人様も大歓迎です。
         </p>
     </section>
 
+    <section id="menu">
+        <h2>お品書き</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>炭火焼き鳥</h3>
+                <p>一本一本丁寧に仕込む自慢の焼き鳥。レバーやねぎま、豚ばらしいたけなど、絶妙な火加減で香ばしく焼き上げます。</p>
+            </div>
+            <div class="menu-item">
+                <h3>新鮮なお刺身・一品料理</h3>
+                <p>旬の食材を活かした日替わりのお刺身や、こだわりの逸品料理をご用意しております。</p>
+            </div>
+            <div class="menu-item">
+                <h3>厳選されたお酒</h3>
+                <p>お料理によく合う焼酎や日本酒を豊富に取り揃えています。お気に入りの一杯を見つけてください。</p>
+            </div>
+        </div>
+    </section>
+
     <section id="news">
-        <h2>お知らせ・Instagram</h2>
+        <h2>お知らせ・最新情報</h2>
         <div class="insta-container">
-            <div class="insta-placeholder">
-                <p>ここにInstagramの最新投稿（または埋め込みウィジェット）が表示されます。</p>
-                <p style="margin-top: 10px; font-size: 0.9rem;">
-                    <a href="https://www.instagram.com/" target="_blank" style="color: var(--accent-gold);">公式Instagramはこちら ↗</a>
-                </p>
+            <div class="insta-box">
+                <p>日々の仕入れ状況や本日のオススメメニューは、店主のInstagramで随時更新中！</p>
+                <a href="https://www.instagram.com/" target="_blank" class="btn-insta">公式Instagramを見る ↗</a>
             </div>
         </div>
     </section>
@@ -232,24 +315,26 @@
         <div class="info-grid">
             <div class="info-card">
                 <h3>営業時間・定休日</h3>
-                <p>営業時間：17:30〜23:00（L.O. 22:30）</p>
-                <p>定休日：不定休（5のつく日など）</p>
+                <p><strong>営業時間：</strong> 17:30〜23:00</p>
+                <p><strong>定休日：</strong> 不定休（5のつく日 ＋ 他3日）</p>
             </div>
             <div class="info-card">
-                <h3>アクセス</h3>
-                <p>東京都豊島区西巣鴨2-32-10 神宮ビル1F</p>
-                <p>都電荒川線「庚申塚駅」から徒歩すぐ</p>
+                <h3>アクセス・お支払い</h3>
+                <p><strong>住所：</strong> 東京都豊島区西巣鴨2-32-10 神宮ビル1F</p>
+                <p><strong>アクセス：</strong> 都電荒川線「庚申塚駅」からすぐ</p>
+                <p><strong>お支払い：</strong> 現金、カード、PayPay 他</p>
             </div>
             <div class="info-card">
-                <h3>お電話</h3>
-                <p>TEL: 03-3918-0084</p>
-                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;">お気軽にお問い合わせください。</p>
+                <h3>店内の特徴・お問合せ</h3>
+                <p><strong>座席：</strong> カウンター・テーブル席あり</p>
+                <p><strong>設備：</strong> 店内電子タバコOK</p>
+                <p><strong>TEL：</strong> 03-3918-0084</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 御代家 All Rights Reserved.</p>
+        <p>&copy; 庚申塚 御代家 All Rights Reserved.</p>
     </footer>
 
 </body>
